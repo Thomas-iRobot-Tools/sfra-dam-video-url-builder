@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Video URL Builder</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+</style>
+<script src=""></script>
+<body>
+<div class="nav-bar">
+	<h1 class="nav-header">Video URL Builder</h1>
+</div>
+<div class="generator-container">
+	<div class="slide-generator">
+		<form id="videoURL-form">
+			<label for="vid-source">Select video platform</label><br/>
+			<select id="vid-source">
+				<option value = "DAM" selected>DAM</option>
+				<option disabled value = "Brightcove">Brightcove - Not available yet</option>
+				<option disabled value = "Youtube">Youtube - Not available yet</option>
+			</select><br/>
+	      	<label id="videoURLLabel" for="videoURL">Video URL</label> <img onmouseover="tooltipOn()" onmouseout="tooltipOff()" id="videoURLTooltip" src="assets/tooltip.png"/><div id="tooltip-copy">Paste the entire embed code from the DAM in here.</div><br/>
+	      	<input type="text" id="videoURL"><br/>
+	      	<button onclick="get_values(event)" id="btn" class="btn">Submit</button>
+	  	</form>
+	  </div>
+	  <div class="code-block">
+	  	<pre><code id="code-display">
+	  		
+	    </code></pre>
+	  </div>
+</div>
+</div> 
+</body>
